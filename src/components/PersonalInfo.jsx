@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react';
+
+import '../styles/PersonalInfo.css'
 
 export default function PersonalInfo() {
 

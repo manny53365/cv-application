@@ -1,0 +1,13 @@
+.personal-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-info input {
+    font-size: 1.25rem;
+    margin: 5px;
+}
+
+.personal-info textarea {
+    margin: 5px;
+}
