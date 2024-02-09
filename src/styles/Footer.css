@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: center;
+    font-size: 1.125rem;
+}
+
+.gh-link {
+    margin-left: 5px;
+    color: #ffffff;
+}
