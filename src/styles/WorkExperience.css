@@ -1,17 +1,17 @@
-.personal-info {
+.work-info {
     display: flex;
     flex-direction: column;
 }
 
-.personal-info h2 {
+.work-info h2 {
     text-align: left;
 }
 
-.personal-info input {
+.work-info input {
     font-size: 1.25rem;
     margin: 5px;
 }
 
-.personal-info textarea {
+.work-info button {
     margin: 5px;
 }

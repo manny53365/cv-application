@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react';
+
+import '../styles/WorkExperience.css';
 
 export default function WorkExperience() {
 
@@ -9,7 +11,7 @@ export default function WorkExperience() {
     const [toDate, setToDate] = useState('');
 
   return (
-    <div>
+    <div className='work-info'>
         <h2>Work Experience</h2>
         <input type="text" placeholder='Title/Role' onChange={event => setTitle(event.target.value)} value={title}/>
         <input type="text" placeholder='Company Name' onChange={event => setCompany(event.target.value)} value={company}/>
