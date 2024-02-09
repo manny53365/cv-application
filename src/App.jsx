@@ -5,7 +5,7 @@ import Education from './components/Education';
 import TitleBar from './components/TitleBar';
 import Footer from './components/Footer';
 
-import './App.css'
+import './styles/App.css'
 
 function App() {
 
