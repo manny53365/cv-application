@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react';
+
+import '../styles/PersonalInfo.css';
 
 export default function PersonalInfo() {
 
@@ -17,7 +19,7 @@ export default function PersonalInfo() {
         <input type="text" placeholder='Address' />
         <input type="text" placeholder='Phone Number'/>
         <input type="text" placeholder='Email'/>
-        <textarea rows="4" />
+        <textarea rows="4" placeholder='Intro' />
     </div>
   )
 }

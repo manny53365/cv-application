@@ -1,0 +1,17 @@
+.work-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-info h2 {
+    text-align: left;
+}
+
+.work-info input {
+    font-size: 1.25rem;
+    margin: 5px;
+}
+
+.work-info button {
+    margin: 5px;
+}
