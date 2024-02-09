@@ -7,11 +7,8 @@
     text-align: left;
 }
 
-.personal-info input {
+.personal-info input, .personal-info textarea {
     font-size: 1.25rem;
     margin: 5px;
 }
 
-.personal-info textarea {
-    margin: 5px;
-}
