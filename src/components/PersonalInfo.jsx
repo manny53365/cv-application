@@ -19,7 +19,7 @@ export default function PersonalInfo() {
         <input type="text" placeholder='Address' />
         <input type="text" placeholder='Phone Number'/>
         <input type="text" placeholder='Email'/>
-        <textarea rows="4" />
+        <textarea rows="4" placeholder='Intro' />
     </div>
   )
 }
