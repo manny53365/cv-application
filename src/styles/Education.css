@@ -1,0 +1,17 @@
+.education-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.education-info h2 {
+    text-align: left;
+}
+
+.education-info input {
+    font-size: 1.25rem;
+    margin: 5px;
+}
+
+.education-info button {
+    margin: 5px;
+}

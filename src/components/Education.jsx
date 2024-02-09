@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react';
+
+import '../styles/Education.css';
 
 export default function Education() {
 
@@ -10,7 +12,7 @@ export default function Education() {
     const [toDate, setToDate] = useState('');
 
   return (
-    <div>
+    <div className='education-info'>
         <h2>Education</h2>
         <input type="text"
         placeholder='College/Univeristy Name' 
