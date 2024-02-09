@@ -2,6 +2,7 @@
 import PersonalInfo from './components/PersonalInfo';
 import './App.css'
 import WorkExperience from './components/WorkExperience';
+import Education from './components/Education';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <PersonalInfo />
       <WorkExperience />
+      <Education />
     </>
   )
 }
