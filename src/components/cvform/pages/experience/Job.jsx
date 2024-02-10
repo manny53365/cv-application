@@ -6,35 +6,35 @@ export const Job = ({ id, job, onChange, onDelete }) => {
   return (
     <div className="job">
         <Input
-        onChange={onChange}
+        onChange={event => onChange(event, id)}
         type='text'
-        placeholder='Role/title'
+        placeholder='Role/Title'
         name='role'
         value={job.role}
         />
         <Input
-        onChange={onChange}
+        onChange={event => onChange(event, id)}
         type='text'
         placeholder='Company name'
         name='company'
         value={job.company}
         />
         <Input
-        onChange={onChange}
+        onChange={event => onChange(event, id)}
         type='text'
         placeholder='City'
         name='city'
         value={job.city}
         />
         <Input
-        onChange={onChange}
+        onChange={event => onChange(event, id)}
         type='text'
         placeholder='From Date'
         name='fromDate'
         value={job.fromDate}
         />
         <Input
-        onChange={onChange}
+        onChange={event => onChange(event, id)}
         type='text'
         placeholder='To Date'
         name='toDate'

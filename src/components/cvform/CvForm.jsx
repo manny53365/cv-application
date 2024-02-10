@@ -125,8 +125,12 @@ export default function CvForm() {
         setCV(emptyCv);
     };
 
+    const handleSubmit = event => {
+        event.preventDefault();
+    }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
         <PersonalInfo
         personalInfo={cv.personalInfo}
         handlePersonalInfoChange={handlePersonalInfoChange}
