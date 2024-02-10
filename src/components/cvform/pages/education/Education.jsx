@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import School from './School';
 
-import '../../styles/Education.css';
+import '../../../../styles/Education.css';
 
 export default function Education() {
 
@@ -11,9 +12,14 @@ export default function Education() {
     const [fromDate, setFromDate] = useState('');
     const [toDate, setToDate] = useState('');
 
+    const handleUniName = event => {
+      setUniName(event.target.value)
+    };
+
   return (
     <div className='education-info'>
         <h2>Education</h2>
+        <School handleUniName={handleUniName} /> 
         <input type="text"
         placeholder='College/Univeristy Name' 
         onChange={event => setUniName(event.target.value)} 
