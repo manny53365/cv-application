@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Input = ({ type, name, placeholder, onChange, value }) => {
+export const Input = ({ type, name, placeholder, onChange, value }) => {
   return (
     <input 
     type={type}
@@ -19,5 +19,3 @@ Input.propTypes = {
     onChange: PropTypes.func,
     value: PropTypes.string
 };
-
-export default Input;

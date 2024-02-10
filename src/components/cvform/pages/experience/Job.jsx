@@ -1,5 +1,5 @@
 import { Button } from "../../../Button";
-import Input from "../../../Input";
+import { Input } from "../../../Input";
 import PropTypes from 'prop-types';
 
 export const Job = ({ id, job, onChange, onDelete }) => {
