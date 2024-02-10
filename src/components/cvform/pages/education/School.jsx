@@ -2,7 +2,7 @@ import { Button } from "../../../Button";
 import { Input } from "../../../Input"
 import PropTypes from 'prop-types';
 
-export const  School = ({ id, education, onChange, onDelete }) => {
+export const School = ({ id, education, onChange, onDelete }) => {
   return (
     <div className="education-item">
         <Input

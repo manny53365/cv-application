@@ -117,7 +117,7 @@ export default function CvForm() {
     const handleDeleteEducation = (id) => {
         setCV(prevState => {
             const updatedEducation = prevState.education.filter(edu => edu.id != id);
-            return {...prevState, experience: [...updatedEducation]}
+            return {...prevState, education: [...updatedEducation]}
         })
     };
 
