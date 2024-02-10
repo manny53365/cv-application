@@ -47,7 +47,7 @@ export default function PersonalInfo() {
           <input type="file" name='Photo' id="file-upload" onChange={handleImage}/>
           <label htmlFor="file-upload" className="btn-file-upload">
           <FontAwesomeIcon icon={faArrowUpFromBracket} />
-            &nbsp; Photo
+            &nbsp; Choose a photo
           </label>
           {photoErr && <div className='error'>{photoErr}</div>}
           {photo && <div>Current photo: {photo.name}</div>}
