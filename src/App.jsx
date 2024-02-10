@@ -1,7 +1,7 @@
 // import { useState } from 'react'
-import PersonalInfo from './components/PersonalInfo';
-import WorkExperience from './components/WorkExperience';
-import Education from './components/Education';
+import PersonalInfo from './pages/personalInfo/PersonalInfo';
+import WorkExperience from './pages/experience/WorkExperience';
+import Education from './pages/education/Education';
 import TitleBar from './components/TitleBar';
 import Footer from './components/Footer';
 

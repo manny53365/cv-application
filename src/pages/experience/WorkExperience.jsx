@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import '../styles/WorkExperience.css';
+import '../../styles/WorkExperience.css';
 
 export default function WorkExperience() {
 

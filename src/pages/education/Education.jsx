@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import '../styles/Education.css';
+import '../../styles/Education.css';
 
 export default function Education() {
 
