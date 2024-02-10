@@ -12,3 +12,25 @@
     margin: 5px;
 }
 
+.file-upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+}
+
+.btn-file-upload {
+    border: 2px solid #007bff;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 8px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.file-upload-wrapper input[type=file] {
+    /* font-size: 50px; */
+    display: none;
+}

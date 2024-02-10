@@ -10,13 +10,13 @@ import './styles/App.css'
 function App() {
 
   return (
-    <>
+    <form>
       <TitleBar />
       <PersonalInfo />
       <WorkExperience />
       <Education />
       <Footer />
-    </>
+    </form>
   )
 }
 
