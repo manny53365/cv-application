@@ -132,7 +132,12 @@ export default function CvForm() {
         handlePersonalInfoChange={handlePersonalInfoChange}
         handleImage = {handleImage}
         />
-        <WorkExperience />
+        <WorkExperience 
+        experience = {cv.experience}
+        handleExperienceChange={handleExperienceChange}
+        handleAddExperience={handleAddExperience}
+        handleDeleteExperience={handleDeleteExperience}
+        />
         <Education />
     </form>
   )
