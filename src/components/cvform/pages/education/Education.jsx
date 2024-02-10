@@ -3,7 +3,7 @@ import School from './School';
 
 import '../../../../styles/Education.css';
 
-export default function Education() {
+export default function Education({ education, handleEducationChange, handleAddEducation, handleDeleteEducation }) {
 
     const [uniName, setUniName] = useState('');
     const [city, setCity] = useState('');

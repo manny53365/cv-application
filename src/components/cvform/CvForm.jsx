@@ -137,12 +137,17 @@ export default function CvForm() {
         handleImage = {handleImage}
         />
         <WorkExperience 
-        experience = {cv.experience}
+        experience={cv.experience}
         handleExperienceChange={handleExperienceChange}
         handleAddExperience={handleAddExperience}
         handleDeleteExperience={handleDeleteExperience}
         />
-        <Education />
+        <Education
+        education={cv.education}
+        handleEducationChange={handleEducationChange}
+        handleAddEducation={handleAddEducation}
+        handleDeleteEducation={handleDeleteEducation}
+        />
     </form>
   )
 }

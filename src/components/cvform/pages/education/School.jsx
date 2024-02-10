@@ -1,18 +1,60 @@
-// import React from 'react';
+import { Button } from "../../../Button";
+import { Input } from "../../../Input"
+import PropTypes from 'prop-types';
 
-export default function School() {
+export const  School = ({ id, education, onChange, onDelete }) => {
   return (
     <div className="education-item">
-        {/* <input type="text"
-        placeholder='College/Univeristy Name' 
-        onChange={handleUniName} 
-        value={uniName}/>
-        <input type="text" placeholder='City' onChange={event => setCity(event.target.value)} value={city}/>
-        <input type="text" placeholder='Degree' onChange={event => setDegree(event.target.value)} value={degree}/>
-        <input type="text" placeholder='Subject' onChange={event => setSubject(event.target.value)} value={subject}/>
-        <input type="text" placeholder='From' onChange={event => setFromDate(event.target.value)} value={fromDate}/>
-        <input type="text" placeholder='To' onChange={event => setToDate(event.target.value)} value={toDate}/>
-        <button>Delete</button> */}
+        <Input
+        type='text'
+        placeholder='Collge/University name'
+        name='uniName'
+        onChange={event => onChange(event, id)}
+        value={education.uniName}
+        />
+        <Input
+        type='text'
+        placeholder='City'
+        name='city'
+        onChange={event => onChange(event, id)}
+        value={education.city}
+        />
+        <Input
+        type='text'
+        placeholder='Degree'
+        name='degree'
+        onChange={event => onChange(event, id)}
+        value={education.degree}
+        />
+        <Input
+        type='text'
+        placeholder='Subject'
+        name='subject'
+        onChange={event => onChange(event, id)}
+        value={education.subject}
+        />
+        <Input
+        type='text'
+        placeholder='From Date'
+        name='fromDate'
+        onChange={event => onChange(event, id)}
+        value={education.fromDate}
+        />
+        <Input
+        type='text'
+        placeholder='To Date'
+        name='toDate'
+        onChange={event => onChange(event, id)}
+        value={education.toDate}
+        />
+        <Button text='Delete' onClick={() => onDelete(id)} />
     </div>
   )
 }
+
+School.propTypes = {
+  id: PropTypes.string,
+  education: PropTypes.object,
+  onChange: PropTypes.func,
+  onDelete: PropTypes.func,
+};
