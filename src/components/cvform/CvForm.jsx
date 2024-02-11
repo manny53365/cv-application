@@ -4,6 +4,7 @@ import WorkExperience from './pages/experience/WorkExperience';
 import Education from './pages/education/Education';
 import emptyCv from '../emptyCv';
 import { v4 as uuidv4 } from 'uuid';
+import { Button } from '../Button';
 
 export default function CvForm() {
 
@@ -134,7 +135,6 @@ export default function CvForm() {
         <PersonalInfo
         personalInfo={cv.personalInfo}
         handlePersonalInfoChange={handlePersonalInfoChange}
-        handleImage = {handleImage}
         />
         <WorkExperience 
         experience={cv.experience}
@@ -148,6 +148,7 @@ export default function CvForm() {
         handleAddEducation={handleAddEducation}
         handleDeleteEducation={handleDeleteEducation}
         />
+        <Button text='Clear form' onClick={clearFields}/>
     </form>
   )
 }
