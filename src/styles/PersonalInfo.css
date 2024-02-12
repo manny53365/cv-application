@@ -1,6 +1,8 @@
 .personal-info {
     display: flex;
     flex-direction: column;
+    width: 80%;
+    margin: 0 10%;
 }
 
 .personal-info h2 {
@@ -31,6 +33,5 @@
 }
 
 .file-upload-wrapper input[type=file] {
-    /* font-size: 50px; */
     display: none;
 }
