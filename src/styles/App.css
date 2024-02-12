@@ -4,3 +4,14 @@
   padding: 2rem;
   text-align: center;
 }
+
+.form-btn-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 10%;
+}
+
+.form-btn-container button {
+  margin: 5px;
+}

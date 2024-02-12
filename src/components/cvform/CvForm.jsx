@@ -5,11 +5,12 @@ import Education from './pages/education/Education';
 import emptyCv from '../emptyCv';
 import { v4 as uuidv4 } from 'uuid';
 import { Button } from '../Button';
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
 
 export default function CvForm() {
 
     const [cv, setCV] = useState(emptyCv);
-    console.log(cv);
 
     const handlePersonalInfoChange = event => {
         const {name, type, value} = event.target;
@@ -25,7 +26,7 @@ export default function CvForm() {
                 [name]: value,
             },
         }))
-    }
+    };
 
     const handleImage = event => {
         let img = event.target.files[0];
@@ -76,7 +77,7 @@ export default function CvForm() {
         }))
     };
 
-    const handleDeleteExperience = (id) => {
+    const handleDeleteExperience = id => {
         setCV((prevState) => {
             const updatedExperience = prevState.experience.filter(job => job.id != id);
             return {...prevState, experience: [...updatedExperience]}
@@ -115,12 +116,27 @@ export default function CvForm() {
         }))
     };
 
-    const handleDeleteEducation = (id) => {
+    const handleDeleteEducation = id => {
         setCV(prevState => {
             const updatedEducation = prevState.education.filter(edu => edu.id != id);
             return {...prevState, education: [...updatedEducation]}
         })
     };
+
+    const generatePDF = async () => {
+        const input = document.getElementById('cv-form');
+        html2canvas(input).then((canvas) => {
+            const imgData = canvas.toDataURL('image/png');
+            const pdf = new jsPDF({
+              orientation: "portrait",
+            });
+            const imgProps= pdf.getImageProperties(imgData);
+            const pdfWidth = pdf.internal.pageSize.getWidth();
+            const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+            pdf.save(`${cv.personalInfo.fName}-${cv.personalInfo.lName}-cv.pdf`);
+        });
+    }
 
     const clearFields = () => {
         setCV(emptyCv);
@@ -128,10 +144,10 @@ export default function CvForm() {
 
     const handleSubmit = event => {
         event.preventDefault();
-    }
+    };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form id='cv-form' onSubmit={handleSubmit}>
         <PersonalInfo
         personalInfo={cv.personalInfo}
         handlePersonalInfoChange={handlePersonalInfoChange}
@@ -148,7 +164,10 @@ export default function CvForm() {
         handleAddEducation={handleAddEducation}
         handleDeleteEducation={handleDeleteEducation}
         />
-        <Button text='Clear form' onClick={clearFields}/>
+        <div className="form-btn-container">
+            <Button text='Generate CV' onClick={generatePDF}/>
+            <Button text='Clear form' onClick={clearFields}/>
+        </div>
     </form>
   )
 }
