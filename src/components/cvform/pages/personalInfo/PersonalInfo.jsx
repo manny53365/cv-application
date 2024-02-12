@@ -33,18 +33,17 @@ export default function PersonalInfo({ personalInfo, handlePersonalInfoChange })
         value={personalInfo.title}
         />
         <div className="file-upload-wrapper">
-          <Input
-          type='file'
-          name='photo'
-          onChange={event => handlePersonalInfoChange(event)}
-          id="file-upload"
-          value={personalInfo.photo}
-          />
+          <input
+            type='file'
+            name='photo'
+            onChange={event => handlePersonalInfoChange(event)}
+            id="file-upload"
+            />
           <label htmlFor="file-upload" className="btn-file-upload">
             <FontAwesomeIcon icon={faArrowUpFromBracket} />
             &nbsp; Choose a photo
           </label>
-          {personalInfo.photo && <div>Current photo: <img src={personalInfo.photo} alt="user" /></div>}
+          {personalInfo.photo && <div>Current photo: <img className='img-preview' src={personalInfo.photo} alt="user" /></div>}
         </div>
         <Input
         type='text'
