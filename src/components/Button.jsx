@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
 
-export const Button = ({ text, onClick}) => {
+export const Button = ({ text, onClick, clearBtn}) => {
   return (
-    <button onClick={onClick}>
+    <button style={{
+      width: clearBtn ? '79%' : null,
+      margin: clearBtn ? '5px' : null
+      }} onClick={onClick}>
         {text}
     </button>
   )
@@ -10,5 +13,6 @@ export const Button = ({ text, onClick}) => {
 
 Button.propTypes = {
     text: PropTypes.string,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    clearBtn: PropTypes.bool
 };

@@ -148,7 +148,7 @@ export default function CvForm() {
         handleAddEducation={handleAddEducation}
         handleDeleteEducation={handleDeleteEducation}
         />
-        <Button text='Clear form' onClick={clearFields}/>
+        <Button clearBtn={true} text='Clear form' onClick={clearFields}/>
     </form>
   )
 }
