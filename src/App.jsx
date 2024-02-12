@@ -1,22 +1,18 @@
-// import { useState } from 'react'
-import PersonalInfo from './components/PersonalInfo';
-import WorkExperience from './components/WorkExperience';
-import Education from './components/Education';
+// import { useState } from 'react';
+// import emptyCv from './components/emptyCv';
 import TitleBar from './components/TitleBar';
 import Footer from './components/Footer';
+import CvForm from './components/cvform/CvForm';
 
 import './styles/App.css'
 
 function App() {
-
   return (
-    <form>
+    <div>
       <TitleBar />
-      <PersonalInfo />
-      <WorkExperience />
-      <Education />
+      <CvForm />
       <Footer />
-    </form>
+    </div>
   )
 }
 
