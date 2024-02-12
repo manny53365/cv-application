@@ -1,0 +1,7 @@
+.job {
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: center;
+    width: 80%;
+    margin: 0 10%;
+}
