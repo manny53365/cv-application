@@ -1,6 +1,8 @@
 .work-info {
     display: flex;
     flex-direction: column;
+    width: 80%;
+    margin: 0 10%;
 }
 
 .work-info h2 {
