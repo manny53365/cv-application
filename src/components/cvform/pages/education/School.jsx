@@ -2,6 +2,8 @@ import { Button } from "../../../Button";
 import { Input } from "../../../Input"
 import PropTypes from 'prop-types';
 
+import '../../../../styles/School.css';
+
 export const School = ({ id, education, onChange, onDelete }) => {
   return (
     <div className="education-item">

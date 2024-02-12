@@ -2,6 +2,8 @@ import { Button } from "../../../Button";
 import { Input } from "../../../Input";
 import PropTypes from 'prop-types';
 
+import '../../../../styles/Job.css';
+
 export const Job = ({ id, job, onChange, onDelete }) => {
   return (
     <div className="job">
