@@ -1,3 +1,7 @@
+hr {
+    width: 100%;
+}
+
 .preview-container {
     display: flex;
     flex-direction: column;
@@ -6,15 +10,27 @@
 .personal-info-preview {
     display: inherit;
     flex-direction: inherit;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
-.preview-name {
-    margin: 0 10px;
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.personal-info-title {
-    margin: 0
+.name-and-title {
+    display: inherit;
+    flex-direction: column;
+    width: 40%;
+}
+
+.contact-info {
+    display: inherit;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
 }
 
 .preview-photo {
