@@ -1,0 +1,24 @@
+.preview-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-info-preview {
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: center;
+}
+
+.preview-name {
+    margin: 0 10px;
+}
+
+.personal-info-title {
+    margin: 0
+}
+
+.preview-photo {
+    height: 200px;
+    width: 200px;
+    margin: 10px auto;
+}

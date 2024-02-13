@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Button } from '../Button';
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
+import Preview from '../previewform/Preview';
 
 export default function CvForm() {
 
@@ -147,27 +148,30 @@ export default function CvForm() {
     };
 
   return (
-    <form id='cv-form' onSubmit={handleSubmit}>
-        <PersonalInfo
-        personalInfo={cv.personalInfo}
-        handlePersonalInfoChange={handlePersonalInfoChange}
-        />
-        <WorkExperience 
-        experience={cv.experience}
-        handleExperienceChange={handleExperienceChange}
-        handleAddExperience={handleAddExperience}
-        handleDeleteExperience={handleDeleteExperience}
-        />
-        <Education
-        education={cv.education}
-        handleEducationChange={handleEducationChange}
-        handleAddEducation={handleAddEducation}
-        handleDeleteEducation={handleDeleteEducation}
-        />
-        <div className="form-btn-container">
-            <Button text='Generate CV' onClick={generatePDF}/>
-            <Button text='Clear form' onClick={clearFields}/>
-        </div>
-    </form>
+    <div>
+        <form id='cv-form' onSubmit={handleSubmit}>
+            <PersonalInfo
+            personalInfo={cv.personalInfo}
+            handlePersonalInfoChange={handlePersonalInfoChange}
+            />
+            <WorkExperience 
+            experience={cv.experience}
+            handleExperienceChange={handleExperienceChange}
+            handleAddExperience={handleAddExperience}
+            handleDeleteExperience={handleDeleteExperience}
+            />
+            <Education
+            education={cv.education}
+            handleEducationChange={handleEducationChange}
+            handleAddEducation={handleAddEducation}
+            handleDeleteEducation={handleDeleteEducation}
+            />
+            <div className="form-btn-container">
+                <Button text='Generate CV' onClick={generatePDF}/>
+                <Button text='Clear form' onClick={clearFields}/>
+            </div>
+        </form>
+        <Preview cv={cv} />
+    </div>
   )
 }
