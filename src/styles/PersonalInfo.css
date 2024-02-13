@@ -35,3 +35,15 @@
 .file-upload-wrapper input[type=file] {
     display: none;
 }
+
+.img-preview {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+}
+
+.img-preview img {
+    width: 25%;
+}

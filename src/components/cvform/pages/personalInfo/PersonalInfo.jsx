@@ -42,7 +42,7 @@ export default function PersonalInfo({ personalInfo, handlePersonalInfoChange })
             <FontAwesomeIcon icon={faArrowUpFromBracket} />
             &nbsp; Choose a photo
           </label>
-          {personalInfo.photo && <div>Current photo: <img className='img-preview' src={personalInfo.photo} alt="user" /></div>}
+          {personalInfo.photo && <div className='img-preview'>Current photo: <img className='img-preview' src={personalInfo.photo} alt="user" /></div>}
         </div>
         <Input
         type='text'
