@@ -23,7 +23,7 @@ hr {
 .name-and-title {
     display: inherit;
     flex-direction: column;
-    width: 70%;
+    width: 40%;
     justify-content: center;
     text-align: left;
     margin-left: 20px;
@@ -49,5 +49,4 @@ hr {
 .preview-photo {
     height: 200px;
     width: 200px;
-    margin: 10px auto;
 }
