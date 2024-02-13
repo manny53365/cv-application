@@ -23,14 +23,27 @@ hr {
 .name-and-title {
     display: inherit;
     flex-direction: column;
-    width: 40%;
+    width: 70%;
+    justify-content: center;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.personal-info-title, .preview-name {
+    margin: 0;
 }
 
 .contact-info {
     display: inherit;
     flex-direction: column;
-    width: 40%;
+    justify-content: center;
+    width: 20%;
     margin: auto;
+    text-align: right;
+}
+
+.preview-address, .preview-phone, .preview-email {
+    margin: 0;
 }
 
 .preview-photo {
